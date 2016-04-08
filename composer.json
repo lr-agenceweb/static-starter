@@ -1,9 +1,9 @@
 {
-    "name": "grafikart/portfolio",
+    "name": "lr-agenceweb/static-starter",
     "authors": [
         {
-            "name": "Grafikart",
-            "email": "contact@grafikart.fr"
+            "name": "L&R Agence web - Static starter",
+            "email": "developers@lr-agenceweb.fr"
         }
     ],
     "autoload": {
