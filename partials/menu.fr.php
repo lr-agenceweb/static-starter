@@ -1,4 +1,4 @@
-<div class="top-bar">
+<header class="top-bar">
   <div class="top-bar-left">
     <ul class="menu">
       <li>
@@ -17,4 +17,4 @@
       </li>
     </ul>
   </div>
-</div>
+</header>
