@@ -1,0 +1,58 @@
+.l-page
+  padding: 40px 0
+  background-color: $white
+  &.success
+    background-color: $success-color
+  &.error
+    background-color: $alert-color
+
+  .page-title, figcaption
+    font-weight: 700
+    font-size: 20px
+    margin-bottom: 40px
+    color: $header-color
+
+  figure
+    margin: 0
+
+    figcaption
+      color: $header-color
+      margin: 7px 0 0 0
+
+  .cta
+    color: $header-color
+    font-weight: 600
+    font-size: 21px
+
+  .semi-bold
+    font-weight: 600
+  .bold
+    font-weight: 700
+
+  .semi-bold, .bold
+    color: rgba($black, .9)
+
+
+@media #{$small-only}
+  .l-page
+    figure
+      img
+        display: block
+        margin: 0 auto
+      figcaption
+        text-align: center
+    [class*="block-grid-"]
+      margin-bottom: 20px
+
+@media #{$medium-up}
+  .l-page
+    margin-top: 40px
+    [class*="block-grid-"] > li
+      margin-bottom: 10px
+    &#who
+      [class*="block-grid-"] > li
+        padding-bottom: 0
+
+@media screen and (max-width: $menu-breakpoint-one)
+  .l-page
+    margin: 0

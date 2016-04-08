@@ -75,7 +75,7 @@ gulp.task 'watchall', ->
 # == Sass task
 #
 gulp.task 'sass', ->
-  sass_task(["#{path.sass}/**/application.sass", 'application.css')
+  sass_task(["#{path.sass}/**/*.sass", "!#{path.sass}/**/noscript.sass", "!#{path.sass}/**/ie9.sass"], 'application.css')
   sass_task(["#{path.sass}/**/noscript.sass"], 'noscript.css')
   sass_task(["#{path.sass}/**/ie9.sass"], 'ie9.css')
 

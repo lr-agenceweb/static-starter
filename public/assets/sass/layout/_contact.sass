@@ -1,0 +1,100 @@
+// Contact
+.m-contact
+  .the-map
+    margin-bottom: 20px
+    .page-title
+      color: $white
+      line-height: 80px
+      text-align: center
+      margin-bottom: 30px
+
+      &.talkbubble
+        width: 100%
+        height: 80px
+        background: $tercery-color
+        position: relative
+
+        &:after
+          content: ''
+          position: absolute
+          top: 100%
+          right: 46px
+          width: 0
+          height: 0
+          pointer-events: none
+          border: solid transparent
+          border-color: transparent
+          border-top-color: $tercery-color
+          border-width: 15px
+          margin-left: -15px
+
+    .map-mapbox
+      width: 100%
+      height: 277px
+
+  .the-contact-information
+    .page-title-with-heading
+      margin-bottom: 31px
+      .page-title
+        margin-bottom: 0 !important
+
+  .more-informations
+    font-weight: 600
+    a
+      color: $tercery-color
+
+  textarea
+    min-height: 170px
+    margin-bottom: 10px
+
+  textarea, input
+    background-color: #e6e7e8
+    border: none
+    outline: none
+
+    &:focus
+      background-color: #e6e7e8
+
+
+  label
+    font-weight: 600
+
+  label, .semi-bold
+    color: #58595b
+
+  input.button
+    margin-bottom: 3px
+
+.mail-container
+  width: 100%
+  padding: 25px
+  text-align: center
+  color: $white
+
+  .mail-title
+    color: $white
+  .mail-content
+    font-size: 1.25rem
+  .mail-link
+    font-size: 0.8rem
+    margin-top: 20px
+
+  a
+    color: $white
+    text-decoration: underline
+
+
+// Mapbox popup
+.mapbox-popup-content
+  a
+    margin-bottom: 0
+    color: $white
+
+
+@media #{$small-only}
+  .m-contact
+    .the-map
+      .map-mapbox
+        height: 350px
+    .the-contact-information
+      margin-top: 45px

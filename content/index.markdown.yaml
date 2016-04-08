@@ -6,14 +6,11 @@ header_title: |
   I create for the web.
 clients_text: Voici mes clients
 clients:
-  -
-    title: Mon super client
+  - title: Mon super client
     img: client1
-  -
-    title: Mon super client
+  - title: Mon super client
     img: client2
-  -
-    title: Mon super client
+  - title: Mon super client
     img: client3
 ---
 

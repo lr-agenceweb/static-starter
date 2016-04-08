@@ -10,8 +10,7 @@ use VKBansal\FrontMatter\Parser;
  *
  * @package App
  */
-class Page
-{
+class Page{
 
   private $path;
   private $parsed_data;
