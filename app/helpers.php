@@ -13,5 +13,15 @@ function pages($path, $depth = 0){
 /* Return the URL for the Page or the route */
 function route($path){
   global $app;
-  return $app->urlFor(is_string($path) ? $path : $path->getName());
+  $locale = locale() == 'en' ? '/' . locale() : '';
+  return $locale . $app->urlFor(is_string($path) ? $path : $path->getName());
+}
+
+/* Return the current locale of the page */
+function locale(){
+  $locale = 'fr';
+  if(strpos($_SERVER['REQUEST_URI'], '/en') !== false){
+    $locale = 'en';
+  }
+  return $locale;
 }

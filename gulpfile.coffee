@@ -27,7 +27,9 @@ path = new (->
   @sass = @root + '/assets/sass'
   @coffee = @root + '/assets/coffeescript'
   @img = @root + '/assets/images'
+  @app = './app'
   @config = './config'
+  @partials = './partials'
   @content = './content'
   @layout = './layouts'
 
@@ -59,9 +61,10 @@ gulp.task 'php', ['watchall'], ->
 #
 gulp.task 'watchall', ->
   gulp.watch([
+    "#{path.app}/**/*.php",
     "#{path.layout}/**/*.php",
-    "#{path.config}/**/*.php",
-    "#{path.config}/**/*.yml",
+    "#{path.partials}/**/*.php",
+    "#{path.config}/**/*.{php,yml}",
     "#{path.content}/**/*.{yaml, yml}"
   ]).on 'change', ->
     browserSync.reload()

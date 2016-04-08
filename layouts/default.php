@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <meta name="author" content="">
+    <meta name="author" content="<?= ADMIN_FULLNAME; ?>">
 
     <title>
       <?= (isset($page) && !is_null($page->title)) ? $page->title . ' | ' : '' ?><?= SITE_TITLE; ?>
@@ -22,27 +22,7 @@
   </head>
 
   <body>
-
-    <div class="top-bar">
-      <div class="top-bar-left">
-        <ul class="menu">
-          <li class="menu-text">
-            <a href="<?= route('home') ?>"><?= SITE_TITLE; ?></a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="top-bar-right">
-        <ul class="menu">
-          <li>
-            <a href="<?= route('home') ?>">Accueil</a>
-          </li>
-          <li>
-            <a href="<?= route('contact') ?>">Me contacter</a>
-          </li>
-        </ul>
-      </div>
-    </div>
+    <?php require_once '../partials/menu.' . locale() . '.php'; ?>
 
     <?= $content; ?>
 
