@@ -16,7 +16,6 @@ $pages = new \App\PagesCollection();
 foreach($pages as $page){
   // We use any cause we may need to access some page using POST to create forms for instance
   $app->any($page->getUrl(), function() use ($page, $app){
-    $site = "moi moi moi";
     echo $page->render();
   })->name($page->getName());
 }
