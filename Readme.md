@@ -35,6 +35,7 @@ You are now ready to deploy !
 
 * **Nginx**  
   * `cap <env> nginx:upload:vhost` : Upload vhost config file to remote server (create file in conf.d)
+  * `cap <env> nginx:upload:symlink` : Symlink uploaded folder path to /var/www/<env>/<application>
   * `cap <env> nginx:vhost:disable` : Disable vhost (rename extension to .disabled)
   * `cap <env> nginx:vhost:enable` : Enable vhost (rename extension to .conf)
   * `cap <env> nginx:vhost:remove` : Remove uploaded vhost to conf.d folder

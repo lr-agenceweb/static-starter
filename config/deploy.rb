@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
 require 'yaml'
-datas_capistrano = YAML.load_file('./config/datas.capistrano.yml')
+capistrano_config = YAML.load_file('./config/capistrano.yml')
 
 # config valid only for current version of Capistrano
 lock '3.4.0'
 
-set :application, datas_capistrano['capistrano']['application_name']
-set :repo_url, datas_capistrano['capistrano']['repo_url']
-set :deploy_user, datas_capistrano['capistrano']['deploy_user']
+set :application, capistrano_config['capistrano']['application_name']
+set :repo_url, capistrano_config['capistrano']['repo_url']
+set :deploy_user, capistrano_config['capistrano']['deploy_user']
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
@@ -29,7 +29,7 @@ set :scm, :git
 # set :pty, true
 
 # Default value for :linked_files is []
-set :linked_files, fetch(:linked_files, []).push('config/config.php', 'config/application.fr.yml', 'config/application.en.yml', 'config/mailing.yml', 'config/dkim/dkim.private.key')
+set :linked_files, fetch(:linked_files, []).push('config/config.php', 'config/application.yml', 'config/mailing.yml', 'config/dkim/dkim.private.key')
 
 # Default value for linked_dirs is []
 set :linked_dirs, fetch(:linked_dirs, []).push('vendor')
@@ -41,7 +41,7 @@ set :default_env, rvm_bin_path: '~/.rvm/bin'
 set :keep_releases, 5
 
 # Capistrano config
-set :capistrano_config, YAML.load_file('./config/datas.capistrano.yml')
+set :capistrano_config, capistrano_config
 
 # Helpers (verification if htpasswd array is not empty AND if username and password are not empty either)
 def htpasswd?(htpasswd_array)

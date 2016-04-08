@@ -1,0 +1,36 @@
+# ---------
+# French
+# --------
+fr:
+  # Website
+  site:
+    title: 'Mon site'
+    subtitle: 'Mon sous-titre'
+
+# ---------
+# English
+# --------
+en:
+  # Website
+  site:
+    title: 'My website'
+    subtitle: 'My subtitle'
+
+# -------
+# Shared
+# ------
+site:
+  url: http://www.monsite.fr
+
+# Administrator
+administrator:
+  firstname: Prénom
+  lastname: Nom
+  telephone: Téléphone
+  telephone_w3c: '+telephone'
+  email: mon@email.fr
+
+  location:
+    address: ~
+    city: ~
+    postcode: ~
