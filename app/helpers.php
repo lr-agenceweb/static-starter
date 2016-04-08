@@ -1,5 +1,5 @@
 <?php
-/* return absolute URL */
+/* Return absolute URL */
 function url($path){
   global $app;
   return $app->request->getRootUri() . '/' . trim($path, '/');
@@ -24,4 +24,18 @@ function locale(){
     $locale = 'en';
   }
   return $locale;
+}
+
+/* Return the current year for copyright */
+function auto_copyright($year = 'auto'){
+  if(intval($year) == 'auto'){
+    $year = date('Y');
+  }
+  if(intval($year) == date('Y')){
+    return intval($year);
+  }
+  elseif(intval($year) < date('Y')){
+    return intval($year) . ' - ' . date('Y');
+  }
+  return date('Y');
 }

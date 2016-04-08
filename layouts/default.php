@@ -26,5 +26,6 @@
 
     <?= $content; ?>
 
+    <?php require_once '../partials/footer.' . locale() . '.php'; ?>
   </body>
 </html>
