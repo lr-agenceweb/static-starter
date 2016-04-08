@@ -8,26 +8,17 @@ server {
   # Make site accessible from http://<%= fetch(:server_name) %>
   server_name <%= fetch(:server_name) %>;
 
-  <% if fetch(:stage) == :staging %>
+  <% if fetch(:stage) == :staging && htpasswd?(fetch(:capistrano_config)['htpasswd']) %>
   # Staging authentication
   auth_basic "Restricted Area :: <%= fetch(:application) %>";
   auth_basic_user_file /etc/htpasswd/<%= fetch(:application) %>;
   <% end %>
 
-  location ~* \.(git|erb|rb|inc|ht|md|slim|sass|scss|coffee)$ {
-    return 404;
-  }
-
-  location ~ "\.git($|/|attributes$|ignore$|modules$)" {
-    return 404;
-  }
-
-  location ~ (gulpfile.js|package.json|composer.json|composer.lock|Gemfile|Gemfile.lock|Capfile|REVISION|.gitignore)$ {
-    return 404;
-  }
-
-  location ~ (/config/(.+)\.(php|key))|(/vendor/(.+)\.(php|yml|md))|(/lib/(.+)\.(erb|rb|rake))$ {
-    return 404;
+  # Redirect everything to index.php
+  location / {
+    if (!-e $request_filename){
+      rewrite ^(.*)$ /index.php last; break;
+    }
   }
 
   location ~ \.php$ {
