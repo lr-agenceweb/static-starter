@@ -29,7 +29,7 @@ set :scm, :git
 # set :pty, true
 
 # Default value for :linked_files is []
-set :linked_files, fetch(:linked_files, []).push('config/config.php', 'config/datas.fr.yml', 'config/datas.en.yml', 'config/datas.base.yml', 'config/dkim/dkim.private.key')
+set :linked_files, fetch(:linked_files, []).push('config/config.php', 'config/application.fr.yml', 'config/application.en.yml', 'config/mailing.yml', 'config/dkim/dkim.private.key')
 
 # Default value for linked_dirs is []
 set :linked_dirs, fetch(:linked_dirs, []).push('vendor')
@@ -39,6 +39,9 @@ set :default_env, rvm_bin_path: '~/.rvm/bin'
 
 # Default value for keep_releases is 5
 set :keep_releases, 5
+
+# Capistrano config
+set :capistrano_config, YAML.load_file('./config/datas.capistrano.yml')
 
 # Helpers (verification if htpasswd array is not empty AND if username and password are not empty either)
 def htpasswd?(htpasswd_array)

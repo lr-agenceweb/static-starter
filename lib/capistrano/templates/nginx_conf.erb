@@ -1,0 +1,44 @@
+server {
+  listen 80;
+  listen [::]:80;
+
+  root /var/www/<%= fetch(:stage) %>/<%= fetch(:application) %>/public;
+  index index.php index.html index.htm;
+
+  # Make site accessible from http://<%= fetch(:server_name) %>
+  server_name <%= fetch(:server_name) %>;
+
+  <% if fetch(:stage) == :staging %>
+  # Staging authentication
+  auth_basic "Restricted Area :: <%= fetch(:application) %>";
+  auth_basic_user_file /etc/htpasswd/<%= fetch(:application) %>;
+  <% end %>
+
+  location ~* \.(git|erb|rb|inc|ht|md|slim|sass|scss|coffee)$ {
+    return 404;
+  }
+
+  location ~ "\.git($|/|attributes$|ignore$|modules$)" {
+    return 404;
+  }
+
+  location ~ (gulpfile.js|package.json|composer.json|composer.lock|Gemfile|Gemfile.lock|Capfile|REVISION|.gitignore)$ {
+    return 404;
+  }
+
+  location ~ (/config/(.+)\.(php|key))|(/vendor/(.+)\.(php|yml|md))|(/lib/(.+)\.(erb|rb|rake))$ {
+    return 404;
+  }
+
+  location ~ \.php$ {
+    try_files $uri =404;
+    fastcgi_pass unix:/var/run/php5-fpm.sock;
+    fastcgi_index index.php;
+    fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+    include fastcgi_params;
+  }
+
+  # Logs
+  error_log /var/log/nginx/<%= fetch(:application) %>.<%= fetch(:stage) %>.log notice;
+  # access_log off;
+}
