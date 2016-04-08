@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="<?= locale() ?>">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="description" content="<?= $page->description ?>">
+    <meta name="keywords" content="<?= $page->keywords ?>">
     <meta name="author" content="<?= ADMIN_FULLNAME; ?>">
 
     <title>
@@ -21,10 +21,13 @@
     </noscript>
   </head>
 
-  <body>
-    <?php require_once '../partials/menu.' . locale() . '.php'; ?>
+  <body itemscope itemtype="http://schema.org/WebPage">
+    <div id="wrapper" class="wrapper">
+      <?php require_once '../partials/menu.' . locale() . '.php'; ?>
+      <?= $content; ?>
 
-    <?= $content; ?>
+      <div class="push"></div>
+    </div>
 
     <?php require_once '../partials/footer.' . locale() . '.php'; ?>
   </body>

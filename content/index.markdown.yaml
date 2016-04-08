@@ -1,6 +1,10 @@
 ---
 layout: homepage
+
 title: Accueil !
+description: Description page d'accueil
+keywords: Mots, clés, page, d'accueil
+
 header_title: |
   Salut, mon nom est <em>John Doe</em>.
 ---
