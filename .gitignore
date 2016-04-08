@@ -1,0 +1,15 @@
+node_modules/
+vendor/
+
+dploy.yaml
+config.php
+
+dkim.private.key
+dkim.public.key
+
+mailing.yml
+capistrano.yml
+application.fr.yml
+application.en.yml
+
+.idea

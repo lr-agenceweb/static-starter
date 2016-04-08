@@ -1,0 +1,14 @@
+== TEAM ==
+==========
+Agency: L&R Agence web
+Website: https://www.lr-agenceweb.fr
+From: FRANCE
+
+== SITE ==
+==========
+Doctype: HTML5
+IDE: Sublime Text 3
+Software: Photoshop
+Technologies: jQuery, Sass, Google Font, Font Awesome, Foundation, Mapbox
+Language: French, English
+Last update: 07/06/2016

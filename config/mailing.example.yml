@@ -1,0 +1,15 @@
+# ---------
+# Mailing
+# --------
+mailing:
+  host: ~
+  username: ~
+  password: ~
+  port: ~
+
+# ---------
+# Dkim
+# --------
+dkim:
+  domain: ~
+  selector: ~

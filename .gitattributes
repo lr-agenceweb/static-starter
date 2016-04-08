@@ -1,0 +1,26 @@
+# Define the line ending behavior of the different file extensions
+# Set default behaviour, in case users don't have core.autocrlf set.
+* text=auto
+* text eol=lf
+
+# Denote all files that are truly binary and should not be modified.
+*.png binary
+*.jpg binary
+*.pdf binary
+
+# Folders
+/config/deploy export-ignore
+/lib export-ignore
+public/assets/coffeescript export-ignore
+public/assets/sass export-ignore
+
+# Files
+/config/deploy.rb export-ignore
+Gemfile export-ignore
+Gemfile.lock export-ignore
+gulpfile.coffee export-ignore
+gulpfile.js export-ignore
+README.md export-ignore
+README.html export-ignore
+Capfile export-ignore
+capistrano.example.yml export-ignore
