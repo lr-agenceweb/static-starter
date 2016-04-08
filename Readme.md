@@ -23,7 +23,7 @@ That's it !
 
 ### Deploy
 [Capistrano](https://capistranorb.com) is configured as deployment tool. Both `staging` and `production` environment are available.  
-To start deployment, duplicate `datas.capistrano.example.yml` and rename it to `datas.capistrano.yml`.  
+To start deployment, duplicate `capistrano.example.yml` and rename it to `capistrano.yml`.  
 Then, set informations about your VPS and your application.  
 You are now ready to deploy !
 
@@ -35,6 +35,7 @@ You are now ready to deploy !
 
 * **Nginx**  
   * `cap <env> nginx:upload:vhost` : Upload vhost config file to remote server (create file in conf.d)
+  * `cap <env> nginx:upload:symlink` : Symlink uploaded folder path to /var/www/<env>/<application>
   * `cap <env> nginx:vhost:disable` : Disable vhost (rename extension to .disabled)
   * `cap <env> nginx:vhost:enable` : Enable vhost (rename extension to .conf)
   * `cap <env> nginx:vhost:remove` : Remove uploaded vhost to conf.d folder

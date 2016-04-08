@@ -6,8 +6,7 @@ namespace :upload do
       execute "mkdir -p #{shared_path}/config"
       upload! StringIO.new(File.read('config/config.php')), "#{shared_path}/config/config.php"
       upload! StringIO.new(File.read('config/mailing.yml')), "#{shared_path}/config/mailing.yml"
-      upload! StringIO.new(File.read('config/application.fr.yml')), "#{shared_path}/config/application.fr.yml"
-      upload! StringIO.new(File.read('config/application.en.yml')), "#{shared_path}/config/application.en.yml"
+      upload! StringIO.new(File.read('config/application.yml')), "#{shared_path}/config/application.yml"
       invoke 'upload:set_permissions'
     end
   end
@@ -16,8 +15,7 @@ namespace :upload do
     on roles(:web) do
       sudo :chmod, '755', "#{shared_path}/config/config.php"
       sudo :chmod, '755', "#{shared_path}/config/mailing.yml"
-      sudo :chmod, '755', "#{shared_path}/config/application.fr.yml"
-      sudo :chmod, '755', "#{shared_path}/config/application.en.yml"
+      sudo :chmod, '755', "#{shared_path}/config/application.yml"
     end
   end
 
@@ -46,6 +44,7 @@ namespace :upload do
 
   desc 'Upload all yml, dkim, missing, seeds and htpasswd authentication in one time'
   task :all do
+    htpasswd_array = fetch(:capistrano_config)['htpasswd']
     invoke 'upload:config'
     invoke 'upload:dkim'
     invoke 'upload:htpasswd' if htpasswd?(htpasswd_array)

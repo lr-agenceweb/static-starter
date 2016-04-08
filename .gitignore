@@ -9,7 +9,6 @@ dkim.public.key
 
 mailing.yml
 capistrano.yml
-application.fr.yml
-application.en.yml
+application.yml
 
 .idea

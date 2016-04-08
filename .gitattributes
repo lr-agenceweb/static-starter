@@ -20,7 +20,9 @@ Gemfile export-ignore
 Gemfile.lock export-ignore
 gulpfile.coffee export-ignore
 gulpfile.js export-ignore
+package.json export-ignore
 README.md export-ignore
+Readme.md export-ignore
 README.html export-ignore
 Capfile export-ignore
 capistrano.example.yml export-ignore
