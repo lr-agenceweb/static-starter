@@ -12,10 +12,11 @@ $pages = new \App\PagesCollection();
 
 // Let's create a route for every YAML file in the content directory
 foreach($pages as $page){
-    // We use any cause we may need to access some page using POST to create forms for instance
-    $app->any($page->getUrl(), function() use ($page, $app){
-        echo $page->render();
-    })->name($page->getName());
+  // We use any cause we may need to access some page using POST to create forms for instance
+  $app->any($page->getUrl(), function() use ($page, $app){
+    $site = "moi moi moi";
+    echo $page->render();
+  })->name($page->getName());
 }
 
 // Let's run our awesome app

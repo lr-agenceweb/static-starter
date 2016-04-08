@@ -8,7 +8,9 @@
     <meta name="keywords" content="">
     <meta name="author" content="">
 
-    <title><?= (isset($page) && isset($page->title)) ? $page->title : 'Mon site'; ?></title>
+    <title>
+      <?= (isset($page) && !is_null($page->title)) ? $page->title . ' | ' : '' ?><?= SITE_TITLE; ?>
+    </title>
 
     <link href='//fonts.googleapis.com/css?family=Poppins:300,700' rel='stylesheet' type='text/css'>
     <link href='//api.mapbox.com/mapbox.js/v2.2.3/mapbox.css' rel='stylesheet' type='text/css'>
@@ -25,7 +27,7 @@
       <div class="top-bar-left">
         <ul class="menu">
           <li class="menu-text">
-            <a href="<?= route('home') ?>">Yeti Agency</a>
+            <a href="<?= route('home') ?>"><?= SITE_TITLE; ?></a>
           </li>
         </ul>
       </div>

@@ -11,12 +11,14 @@
             "App\\": "app"
         },
         "files": [
-            "app/helpers.php"
+            "app/helpers.php",
+            "config/config.php"
         ]
     },
     "require": {
         "slim/slim": "~2.6",
         "vkbansal/frontmatter": "~1.3",
-        "cebe/markdown": "~1.1"
+        "cebe/markdown": "~1.1",
+        "mustangostang/spyc": "^0.5.1"
     }
 }
