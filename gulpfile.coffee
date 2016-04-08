@@ -27,6 +27,8 @@ path = new (->
   @sass = @root + '/assets/sass'
   @coffee = @root + '/assets/coffeescript'
   @img = @root + '/assets/images'
+  @content = './content'
+  @layout = './layouts'
 
   @dist_root = @root
   @dist_css = @root + '/assets/css'
@@ -35,29 +37,30 @@ path = new (->
 )
 
 #
-# == PHP Server
+# == Server
 #
-gulp.task 'php', ->
-  php.server
+gulp.task 'php', ['watchall'], ->
+  php.server {
     base: path.root
     port: 8013
     keepalive: true
-
-#
-# == Gulp Server
-#
-gulp.task 'serve', ['php', 'watchall'], ->
-  browserSync
-    notify: false
-    port: 8080
-    open: false
-    reloadDelay: 2000
-    proxy: '127.0.0.1:8013'
+  }, ->
+    browserSync
+      notify: false
+      port: 8080
+      open: false
+      ui: false
+      proxy: '127.0.0.1:8013'
+    return
 
 #
 # == Watcher
 #
 gulp.task 'watchall', ->
+  gulp.watch(["#{path.layout}/**/*.php", "#{path.content}/**/*.{yaml, yml}"]).on 'change', ->
+    browserSync.reload()
+    return
+
   gulp.watch ["#{path.sass}/**/*.sass", "#{path.sass}/**/*.scss"], ['sass', reload]
   gulp.watch "#{path.coffee}/**/*.coffee", ['coffee', reload]
   watcher = gulp.watch "#{path.img}/**/*.*", [reload]
@@ -115,7 +118,7 @@ gulp.task 'coffee', ->
 #
 gulp.task 'dist', ['sass', 'coffee']
 
-gulp.task 'default', ['serve']
+gulp.task 'default', ['php']
 
 
 # Function to handle sass for various files
