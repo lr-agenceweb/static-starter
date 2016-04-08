@@ -10,7 +10,7 @@
 
     <title><?= (isset($page) && isset($page->title)) ? $page->title : 'Mon site'; ?></title>
 
-    <link href='//fonts.googleapis.com/css?family=Poppins:300,400,500,600,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Poppins:300,700' rel='stylesheet' type='text/css'>
     <link href='//api.mapbox.com/mapbox.js/v2.2.3/mapbox.css' rel='stylesheet' type='text/css'>
     <link href="<?= url('/assets/css/application.css'); ?>" rel='stylesheet' type='text/css'>
 
@@ -20,18 +20,27 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-inverse" style="margin-bottom: 0;">
-      <div class="container">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="<?= route('home') ?>">Bootstrap theme</a>
-          <ul class="nav navbar-nav">
-            <li>
-              <a href="<?= route('contact') ?>">Me contacter</a>
-            </li>
-          </ul>
-        </div>
+
+    <div class="top-bar">
+      <div class="top-bar-left">
+        <ul class="menu">
+          <li class="menu-text">
+            <a href="<?= route('home') ?>">Yeti Agency</a>
+          </li>
+        </ul>
       </div>
-    </nav>
+
+      <div class="top-bar-right">
+        <ul class="menu">
+          <li>
+            <a href="<?= route('home') ?>">Accueil</a>
+          </li>
+          <li>
+            <a href="<?= route('contact') ?>">Me contacter</a>
+          </li>
+        </ul>
+      </div>
+    </div>
 
     <?= $content; ?>
 
