@@ -23,4 +23,4 @@ gulpfile.js export-ignore
 README.md export-ignore
 README.html export-ignore
 Capfile export-ignore
-datas.capistrano.example.yml export-ignore
+capistrano.example.yml export-ignore
