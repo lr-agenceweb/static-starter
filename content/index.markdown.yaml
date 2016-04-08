@@ -2,7 +2,7 @@
 layout: homepage
 title: Bienvenue sur mon site
 header_title: |
-  Hello, my name is <strong>John Doe</strong>.
+  Hello, my name is <em>John Doe</em>.
   I create for the web.
 clients_text: Voici mes clients
 clients:
