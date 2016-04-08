@@ -28,10 +28,11 @@ path = new (->
   @coffee = @root + '/assets/coffeescript'
   @img = @root + '/assets/images'
   @app = './app'
+  @views = './views'
   @config = './config'
-  @partials = './partials'
-  @content = './content'
-  @layout = './layouts'
+  @partials = @views + '/partials'
+  @content = @views + '/content'
+  @layout = @views + '/layouts'
 
   @dist_root = @root
   @dist_css = @root + '/assets/css'
@@ -62,10 +63,8 @@ gulp.task 'php', ['watchall'], ->
 gulp.task 'watchall', ->
   gulp.watch([
     "#{path.app}/**/*.php",
-    "#{path.layout}/**/*.php",
-    "#{path.partials}/**/*.php",
     "#{path.config}/**/*.{php,yml}",
-    "#{path.content}/**/*.{yaml, yml}"
+    "#{path.views}/**/*.{php,yaml,yml}"
   ]).on 'change', ->
     browserSync.reload()
     return

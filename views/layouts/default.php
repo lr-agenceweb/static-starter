@@ -24,12 +24,12 @@
 
   <body itemscope itemtype="http://schema.org/WebPage">
     <div id="wrapper" class="wrapper">
-      <?php require_once '../partials/menu.' . locale() . '.php'; ?>
+      <?php require_once partials_path . '/menu.' . locale() . '.php'; ?>
       <?= $content; ?>
 
       <div class="push"></div>
     </div>
 
-    <?php require_once '../partials/footer.' . locale() . '.php'; ?>
+    <?php require_once partials_path . '/footer.' . locale() . '.php'; ?>
   </body>
 </html>
