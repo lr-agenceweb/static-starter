@@ -7,6 +7,7 @@
     <meta name="description" content="<?= $page->description ?>">
     <meta name="keywords" content="<?= $page->keywords ?>">
     <meta name="author" content="<?= ADMIN_FULLNAME; ?>">
+    <link type='text/plain' rel='author' href='/humans.txt'>
 
     <title>
       <?= (isset($page) && !is_null($page->title)) ? $page->title . ' | ' : '' ?><?= SITE_TITLE; ?>
