@@ -7,10 +7,9 @@ config.php
 dkim.private.key
 dkim.public.key
 
+mailing.yml
+capistrano.yml
 application.fr.yml
 application.en.yml
-application.base.yml
-application.capistrano.yml
-mailing.yml
 
 .idea

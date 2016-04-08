@@ -1,0 +1,20 @@
+#
+# == Capistrano [Deploy]
+#
+capistrano:
+  application_name: ~
+  repo_url: ~
+  deploy_user: ~
+  deploy_path: ~
+  deploy_server_ip: ~
+
+  server_name:
+    staging: ~ # Ex: www2.my-website.com
+    production: ~ # Ex: www.my-website.com
+
+# Staging authentication
+htpasswd:
+  - username: ~
+    password: ~
+  - username: ~
+    password: ~
