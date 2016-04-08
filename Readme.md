@@ -23,7 +23,7 @@ That's it !
 
 ### Deploy
 [Capistrano](https://capistranorb.com) is configured as deployment tool. Both `staging` and `production` environment are available.  
-To start deployment, duplicate `datas.capistrano.example.yml` and rename it to `datas.capistrano.yml`.  
+To start deployment, duplicate `capistrano.example.yml` and rename it to `capistrano.yml`.  
 Then, set informations about your VPS and your application.  
 You are now ready to deploy !
 
