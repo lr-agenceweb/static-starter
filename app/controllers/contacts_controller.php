@@ -7,9 +7,9 @@ Class ContactsController extends ApplicationController {
     $validator = $this->app->contact_validator;
 
     $validator->check('name', 'required');
-    // $validator->check('email', 'required');
-    // $validator->check('email', 'email');
-    // $validator->check('message', 'required');
+    $validator->check('email', 'required');
+    $validator->check('email', 'email');
+    $validator->check('message', 'required');
     $errors = $validator->errors();
 
     if(!empty($errors)) {

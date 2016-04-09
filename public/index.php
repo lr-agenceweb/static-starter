@@ -10,7 +10,9 @@ define('content_path', views_path . DIRECTORY_SEPARATOR . 'content');
 define('layouts_path', views_path . DIRECTORY_SEPARATOR . 'layouts');
 
 // We start Slim and create a new PagesCollection
-$app = new \Slim\Slim(['debug' => true]);
+$app = new \Slim\Slim([
+  'templates.path' => views_path
+]);
 $app->add(new \Slim\Middleware\SessionCookie);
 
 $router = new Router($app);
