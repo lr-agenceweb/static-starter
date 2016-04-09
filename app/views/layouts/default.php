@@ -31,5 +31,6 @@
     </div>
 
     <?php require_once partials_path . '/footer.' . locale() . '.php'; ?>
+    <?php require_once partials_path . '/_flash.php'; ?>
   </body>
 </html>
