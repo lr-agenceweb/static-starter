@@ -27,9 +27,10 @@ path = new (->
   @sass = @root + '/assets/sass'
   @coffee = @root + '/assets/coffeescript'
   @img = @root + '/assets/images'
+
   @app = './app'
-  @views = './views'
   @config = './config'
+  @views = @app + '/views'
   @partials = @views + '/partials'
   @content = @views + '/content'
   @layout = @views + '/layouts'
@@ -46,7 +47,7 @@ path = new (->
 gulp.task 'php', ['watchall'], ->
   php.server {
     base: path.root
-    port: 8013
+    port: 8014
     keepalive: true
   }, ->
     browserSync
@@ -54,7 +55,7 @@ gulp.task 'php', ['watchall'], ->
       port: 8080
       open: false
       ui: false
-      proxy: '127.0.0.1:8013'
+      proxy: '127.0.0.1:8014'
     return
 
 #
@@ -62,9 +63,7 @@ gulp.task 'php', ['watchall'], ->
 #
 gulp.task 'watchall', ->
   gulp.watch([
-    "#{path.app}/**/*.php",
-    "#{path.config}/**/*.{php,yml}",
-    "#{path.views}/**/*.{php,yaml,yml}"
+    "#{path.app}/**/*.{php,yaml,yml}"
   ]).on 'change', ->
     browserSync.reload()
     return

@@ -3,7 +3,8 @@ require '../vendor/autoload.php';
 
 // Constants
 define('base_path', dirname(__DIR__));
-define('views_path', base_path . DIRECTORY_SEPARATOR . 'views' );
+define('app_path', base_path . DIRECTORY_SEPARATOR . 'app' );
+define('views_path', app_path . DIRECTORY_SEPARATOR . 'views' );
 define('partials_path', views_path . DIRECTORY_SEPARATOR . 'partials' );
 define('content_path', views_path . DIRECTORY_SEPARATOR . 'content');
 define('layouts_path', views_path . DIRECTORY_SEPARATOR . 'layouts');
