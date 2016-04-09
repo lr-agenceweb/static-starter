@@ -20,6 +20,18 @@
     <noscript>
       <link href="<?= url('/assets/css/noscript.css'); ?>" rel='stylesheet' type='text/css>'>
     </noscript>
+
+    <script type='text/javascript'>
+      (function() {
+        var other, script;
+        script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.async = true;
+        script.src = "<?= url('/assets/js/application.js'); ?>"
+        other = document.getElementsByTagName('script')[0];
+        other.parentNode.insertBefore(script, other);
+      })();
+    </script>
   </head>
 
   <body itemscope itemtype="http://schema.org/WebPage">
