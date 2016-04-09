@@ -112,6 +112,7 @@ gulp.task 'coffee', ->
     'node_modules/jquery-placeholder/jquery.placeholder.js',
     'node_modules/foundation-sites/js/foundation.core.js',
     'node_modules/foundation-sites/js/foundation.util.mediaQuery.js',
+    'node_modules/foundation-sites/js/foundation.util.triggers.js',
     'node_modules/foundation-sites/js/foundation.abide.js'
   ]
   .pipe $.babel()

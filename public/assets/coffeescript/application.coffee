@@ -14,3 +14,8 @@ $ ->
 
   # Autosize textarea
   autosize $('textarea')
+
+  setTimeout (->
+    $('.alert-box').fadeOut()
+    return
+  ), 5000
