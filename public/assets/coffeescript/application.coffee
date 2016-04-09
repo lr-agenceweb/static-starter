@@ -14,6 +14,3 @@ $ ->
 
   # Autosize textarea
   autosize $('textarea')
-
-  # Replace current year if outdated
-  $('.current-year').text(new Date().getFullYear())
