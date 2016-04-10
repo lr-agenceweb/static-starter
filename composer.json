@@ -11,6 +11,8 @@
             "App\\": "app"
         },
         "files": [
+            "app/models/page.php",
+            "app/models/pages_collection.php",
             "app/helpers/helpers.php",
             "app/router.php",
             "app/validators/contact_validator.php",

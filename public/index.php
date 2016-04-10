@@ -15,7 +15,7 @@ $app = new \Slim\Slim([
 ]);
 $app->add(new \Slim\Middleware\SessionCookie);
 
-$router = new Router($app);
+$router = new \App\Router($app);
 $pages = new \App\PagesCollection();
 
 $router->post('/contact', 'Contacts@post');
