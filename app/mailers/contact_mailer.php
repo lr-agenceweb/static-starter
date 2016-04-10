@@ -63,6 +63,24 @@ class ContactMailer {
   }
 
   public function send_email() {
-    $this->mail->send();
+    # Send Email
+    $data = [];
+    if($this->mail->send()) {
+      if(is_ajax()){
+        $data['success'] = true;
+        $data['feedback'] = FEEDBACK_SUCCESS;
+        echo json_encode($data);
+        die();
+      }
+    } else {
+      if(is_ajax()){
+        $data['success'] = false;
+        $data['feedback'] = FEEDBACK_ERROR;
+        echo json_encode($data);
+        die();
+      }
+    }
+
+    header('Location: ' . $_SERVER['HTTP_REFERER'] );
   }
 }

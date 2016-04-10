@@ -18,6 +18,6 @@ submit_contact_form_with_ajax = ->
         $('#message').val('')
         alert_class = 'success'
       $('div.alert').remove()
-      $('form').prepend("<div class='alert alert-#{alert_class}'>" + data.feedback + '</div>');
+      $('form').prepend("<div class='callout #{alert_class}'>" + data.feedback + '</div>');
       return
     return
