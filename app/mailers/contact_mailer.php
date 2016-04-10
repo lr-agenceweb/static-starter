@@ -24,7 +24,7 @@ class ContactMailer {
 
   public function set_headers($copy = false) {
     # Configuration SMTP
-    $this->mail = new PHPMailer();
+    $this->mail = new \PHPMailer();
     $this->mail->isSMTP();
     $this->mail->Host = SMTP_HOST;
     $this->mail->SMTPAuth = true;
@@ -42,13 +42,13 @@ class ContactMailer {
     $this->mail->setLanguage('fr');
 
     if($copy) {
-      $this->mail->setFrom(ADMIN_EMAIL, ADMIN_NAME);
+      $this->mail->setFrom(ADMIN_EMAIL, ADMIN_FULLNAME);
       $this->mail->addAddress(strip_tags($this->datas['email']), strip_tags($this->datas['fullname']));
-      $this->mail->addReplyTo(ADMIN_EMAIL, ADMIN_NAME);
+      $this->mail->addReplyTo(ADMIN_EMAIL, ADMIN_FULLNAME);
     }
     else {
       $this->mail->setFrom(strip_tags($this->datas['email']), strip_tags($this->datas['fullname']));
-      $this->mail->addAddress(ADMIN_EMAIL, ADMIN_NAME);
+      $this->mail->addAddress(ADMIN_EMAIL, ADMIN_FULLNAME);
       $this->mail->addReplyTo(strip_tags($this->datas['email']), strip_tags($this->datas['fullname']));
     }
   }
