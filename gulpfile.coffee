@@ -27,6 +27,7 @@ path = new (->
   @sass = @root + '/assets/sass'
   @coffee = @root + '/assets/coffeescript'
   @img = @root + '/assets/images'
+  @fonts = @root + '/assets/fonts'
 
   @app = './app'
   @config = './config'
@@ -120,6 +121,10 @@ gulp.task 'coffee', ->
   .pipe $.uglify()
   .pipe $.size()
   .pipe gulp.dest path.dist_js
+
+gulp.task 'fonts', ->
+  gulp.src 'node_modules/font-awesome/fonts/*'
+  .pipe gulp.dest path.fonts
 
 #
 # == Copy all assets and pages to the site folder
