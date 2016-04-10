@@ -19,7 +19,7 @@ class ContactMailer {
       'sender' => $this->datas['fullname'],
       'url' => SITE_URL
     );
-    $this->tmpl = new EmailTemplate('template.php', $form_data);
+    $this->tmpl = new EmailTemplate(mailers_path . '/contact_mailer.php', $form_data);
   }
 
   public function set_headers($copy = false) {

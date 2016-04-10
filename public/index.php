@@ -8,6 +8,7 @@ define('views_path', app_path . DIRECTORY_SEPARATOR . 'views' );
 define('partials_path', views_path . DIRECTORY_SEPARATOR . 'partials' );
 define('content_path', views_path . DIRECTORY_SEPARATOR . 'content');
 define('layouts_path', views_path . DIRECTORY_SEPARATOR . 'layouts');
+define('mailers_path', views_path . DIRECTORY_SEPARATOR . 'mailers' );
 
 // We start Slim and create a new PagesCollection
 $app = new \Slim\Slim([
