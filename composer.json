@@ -11,7 +11,11 @@
             "App\\": "app"
         },
         "files": [
-            "app/helpers.php",
+            "app/helpers/helpers.php",
+            "app/router.php",
+            "app/validators/contact_validator.php",
+            "app/controllers/application_controller.php",
+            "app/controllers/contacts_controller.php",
             "config/config.php"
         ]
     },

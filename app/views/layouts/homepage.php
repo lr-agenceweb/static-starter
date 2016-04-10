@@ -7,13 +7,12 @@
   </div>
 </div>
 
-
 <div class="row">
   <div class="medium-6 columns medium-push-6">
     <img class="thumbnail" src="http://placehold.it/750x350">
   </div>
 
   <div class="medium-6 columns medium-pull-6">
-    <?= $content ?>
+    <?= $content; ?>
   </div>
 </div>
