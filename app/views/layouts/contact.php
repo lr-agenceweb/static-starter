@@ -4,14 +4,14 @@
   <?= $content; ?>
 
   <div class="medium-6 columns">
-    <form action="<?= Slim\Slim::getInstance()->urlFor('contact'); ?>" method="post" data-abide novalidate>
+    <form action="<?= Slim\Slim::getInstance()->urlFor('contact'); ?>" method="post" data-abide2 novalidate>
 
       <div data-abide-error class="alert callout" style="display: none;">
         <p><i class="fa fa-exclamation-triangle"></i> Des erreurs ont empêchées le formulaire d'être correctement soumis. </p>
       </div>
 
       <label>Nom
-        <input type="text" name="name" placeholder="Votre nom (*)" required />
+        <input type="text" name="fullname" placeholder="Votre nom (*)" required />
         <span class="form-error"> N'oubliez pas de renseigner votre nom ;) </span>
       </label>
 

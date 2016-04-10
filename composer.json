@@ -11,14 +11,21 @@
             "App\\": "app"
         },
         "files": [
-            "app/models/page.php",
-            "app/models/pages_collection.php",
-            "app/mailers/email_template.php",
-            "app/helpers/helpers.php",
             "app/router.php",
-            "app/validators/contact_validator.php",
+
             "app/controllers/application_controller.php",
             "app/controllers/contacts_controller.php",
+
+            "app/models/page.php",
+            "app/models/pages_collection.php",
+
+            "app/helpers/helpers.php",
+
+            "app/mailers/contact_mailer.php",
+            "app/mailers/email_template.php",
+
+            "app/validators/contact_validator.php",
+
             "config/config.php"
         ]
     },
