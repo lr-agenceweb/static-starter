@@ -24,6 +24,10 @@ Class ContactValidator {
     return array_key_exists($name, $this->datas) && filter_var($this->datas[$name], FILTER_VALIDATE_EMAIL);
   }
 
+  public function validate_absent($name) {
+    return $this->datas[$name] == '';
+  }
+
   public function errors() {
     return $this->errors;
   }

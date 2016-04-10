@@ -10,6 +10,8 @@
         <p><i class="fa fa-exclamation-triangle"></i> Des erreurs ont empêchées le formulaire d'être correctement soumis. </p>
       </div>
 
+      <input type="text" name="nickname" id="nickname" style="display:none">
+
       <label>Nom
         <input type="text" name="fullname" placeholder="Votre nom (*)" id="fullname" required />
         <span class="form-error"> N'oubliez pas de renseigner votre nom ;) </span>

@@ -6,6 +6,7 @@ Class ContactsController extends ApplicationController {
     $errors = [];
     $validator = $this->app->contact_validator;
 
+    $validator->check('nickname', 'absent'); # Captcha
     $validator->check('fullname', 'required');
     $validator->check('email', 'required');
     $validator->check('email', 'email');
@@ -13,6 +14,17 @@ Class ContactsController extends ApplicationController {
     $errors = $validator->errors();
 
     if(!empty($errors)) {
+      if(array_key_exists('nickname', $errors)) {
+        if(is_ajax()) {
+          $data['success'] = false;
+          $data['feedback'] = FEEDBACK_ERROR;
+          echo json_encode($data);
+          die();
+        } else {
+          $errors['nickname'] = ['We don\'t like robots here'];
+          $this->app->redirect($this->app->urlFor('home'), 403);
+        }
+      }
       $this->app->flash('errors', $errors);
     } else {
       $mail = new App\ContactMailer($_POST);

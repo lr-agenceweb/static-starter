@@ -62,8 +62,8 @@ class ContactMailer {
     $this->mail->DKIM_identity = $this->mail->From;
   }
 
+  # Send Email
   public function send_email() {
-    # Send Email
     $data = [];
     if($this->mail->send()) {
       if(is_ajax()){
