@@ -21,8 +21,8 @@ Class ContactsController extends ApplicationController {
           echo json_encode($data);
           die();
         } else {
-          $errors['nickname'] = ['We don\'t like robots here'];
-          $this->app->redirect($this->app->urlFor('home'), 403);
+          $this->app->flash('errors', [FEEDBACK_ERROR]);
+          $this->app->redirect($this->app->urlFor('contact'), 403);
         }
       }
       $this->app->flash('errors', $errors);
@@ -31,18 +31,18 @@ Class ContactsController extends ApplicationController {
       $mail->set_template();
       $mail->set_headers();
       $mail->set_dkim();
-      $mail->send_email();
+      $feedback = $mail->send_email();
 
       # Copy for user
       if(isset($_POST['checkbox_copy'])) {
-        $mail = new App\ContactMailer($_POST);
-        $mail->set_template();
-        $mail->set_headers(true);
-        $mail->set_dkim();
-        $mail->send_email();
+        $mail_copy = new App\ContactMailer($_POST);
+        $mail_copy->set_template();
+        $mail_copy->set_headers(true);
+        $mail_copy->set_dkim();
+        $mail_copy->send_email();
       }
 
-      $this->app->flash('success', 'The mail has been sent successfully');
+      $mail->feedback($feedback, $this->app);
     }
 
     $this->app->redirect($this->app->urlFor('contact'));

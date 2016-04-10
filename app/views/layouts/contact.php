@@ -12,22 +12,30 @@
 
       <input type="text" name="nickname" id="nickname" style="display:none">
 
-      <label>Nom
+      <label for="fullname">Nom
         <input type="text" name="fullname" placeholder="Votre nom (*)" id="fullname" required />
         <span class="form-error"> N'oubliez pas de renseigner votre nom ;) </span>
       </label>
 
-      <label>Email
+      <label for="email">Email
         <input type="email" name="email" placeholder="Votre email (*)" id="email" required pattern="email" />
         <span class="form-error"> N'oubliez pas de renseigner un email valide ;) </span>
       </label>
 
-      <label>Message
+      <label for="message">Message
         <textarea name="message" class="autosize" placeholder="Votre message (*)" id="message" required ></textarea>
         <span class="form-error"> N'oubliez pas de renseigner votre message ;) </span>
       </label>
 
+      <label for="checkbox_copy" class="right inline copy">Recevoir une copie de ce mail
+        <input id="checkbox_copy" type="checkbox" name="checkbox_copy" checked value="1">
+      </label>
+
       <input type="submit" value="Envoyer" class="button" />
+
+      <p class="text-right">
+        <small> * indique un champ requis </small>
+      </p>
     </form>
   </div>
 </div>

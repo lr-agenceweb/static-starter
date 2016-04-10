@@ -64,14 +64,19 @@ class ContactMailer {
 
   # Send Email
   public function send_email() {
+    return $this->mail->send();
+  }
+
+  public function feedback($feedback, $app) {
     $data = [];
-    if($this->mail->send()) {
+    if($feedback) {
       if(is_ajax()){
         $data['success'] = true;
         $data['feedback'] = FEEDBACK_SUCCESS;
         echo json_encode($data);
         die();
       }
+      $app->flash('success', FEEDBACK_SUCCESS);
     } else {
       if(is_ajax()){
         $data['success'] = false;
@@ -79,8 +84,7 @@ class ContactMailer {
         echo json_encode($data);
         die();
       }
+      $app->flash('errors', [FEEDBACK_ERROR]);
     }
-
-    header('Location: ' . $_SERVER['HTTP_REFERER'] );
   }
 }
