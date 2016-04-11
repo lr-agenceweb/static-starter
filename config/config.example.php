@@ -46,9 +46,9 @@ define("DEFAULT_LOCALE", locale());
 define("DIR_LOCALE", base_path . "/config/locales");
 
 // Feedback messages
-define('FEEDBACK_WRONG_FIELDS', '');
-define('FEEDBACK_SUCCESS', '');
-define('FEEDBACK_ERROR', '');
+define('FEEDBACK_WRONG_FIELDS', App\I18N::t('mailer.errors.feedback.wrong_fields'));
+define('FEEDBACK_SUCCESS', App\I18N::t('mailer.errors.feedback.success'));
+define('FEEDBACK_ERROR', App\I18N::t('mailer.errors.feedback.error'));
 
 // Date
 date_default_timezone_set('Europe/Paris');

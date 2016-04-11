@@ -7,7 +7,7 @@
     <form action="<?= Slim\Slim::getInstance()->urlFor('contact'); ?>" method="post" id="contact_form" data-abide novalidate>
 
       <div data-abide-error class="alert callout" style="display: none;">
-        <p><i class="fa fa-exclamation-triangle"></i> <?= App\I18N::t('mailer.errors.global'); ?> </p>
+        <p><i class="fa fa-exclamation-triangle"></i> <?= FEEDBACK_WRONG_FIELDS; ?> </p>
       </div>
 
       <input type="text" name="nickname" id="nickname" style="display:none">
