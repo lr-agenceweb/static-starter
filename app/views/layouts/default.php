@@ -35,14 +35,16 @@
   </head>
 
   <body itemscope itemtype="http://schema.org/WebPage">
-    <div id="wrapper" class="wrapper">
+    <?php require_once partials_path . '/_no_js.php'; ?>
+    <?php require_once partials_path . '/_flash.php'; ?>
+
+    <main id="wrapper" class="wrapper">
       <?php require_once partials_path . '/menu.' . locale() . '.php'; ?>
       <?= $content; ?>
 
       <div class="push"></div>
-    </div>
+    </main>
 
     <?php require_once partials_path . '/footer.' . locale() . '.php'; ?>
-    <?php require_once partials_path . '/_flash.php'; ?>
   </body>
 </html>
