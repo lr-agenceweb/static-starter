@@ -32,6 +32,10 @@ define('DKIM_SELECTOR', $mailing['dkim']['selector']);
 define('MAIL_SUBJECT', '');
 define('MAIL_SUBJECT_COPY', '');
 
+// I18n
+define("DEFAULT_LOCALE", locale());
+define("DIR_LOCALE", dirname(__DIR__) . "/config/locales");
+
 // Feedback messages
 define('FEEDBACK_WRONG_FIELDS', '');
 define('FEEDBACK_SUCCESS', '');
