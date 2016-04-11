@@ -1,0 +1,26 @@
+fr:
+  mailer:
+    label:
+      fullname: Nom
+      email: Email
+      message: Message
+      submit: Envoyer
+      copy: Recevoir une copie de ce mail
+      required: Tous les champs suffixés d'un astérisque (*) sont obligatoires
+
+    placeholder:
+      fullname: Votre nom (*)
+      email: Votre email (*)
+      message: Votre message (*)
+
+    errors:
+      fullname: N'oubliez pas de renseigner votre nom ;)
+      email: N'oubliez pas de renseigner un email valide ;)
+      message: N'oubliez pas de renseigner votre message ;)
+      feedback:
+        wrong_fields: Les champs du formulaire n'ont pas été correctement remplis. Veuillez corriger vos informations.
+        success: Merci, votre message a bien été envoyé. Je vous répondrai dès que possible.
+        error: Une erreur s'est produite lors de l'envoie du mail. Veuillez réessayer ultérieurement.
+
+  footer:
+    copyright: Tous droits réservés

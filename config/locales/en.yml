@@ -1,0 +1,26 @@
+en:
+  mailer:
+    label:
+      fullname: Name
+      email: Email
+      message: Message
+      submit: Send
+      copy: Receive a copy of this email
+      required: All fields suffixed with an asterisk (*) are required
+
+    placeholder:
+      fullname: Your name (*)
+      email: Your email (*)
+      message: Your message (*)
+
+    errors:
+      fullname: Don't forget to add your name ;)
+      email: Don't forget to add a valid email ;)
+      message: Don't forget to add your message ;)
+      feedback:
+        wrong_fields: The form fields are not correctly filled. Please correct your information.
+        success: Thank you, your message has been sent. I will answer you as soon as possible.
+        error: An error occurred while sending the email. Please try again later.
+
+  footer:
+    copyright: All rights reserved

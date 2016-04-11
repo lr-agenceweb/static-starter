@@ -18,6 +18,7 @@
 
             "app/models/page.php",
             "app/models/pages_collection.php",
+            "app/models/i18n.php",
 
             "app/helpers/helpers.php",
 

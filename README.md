@@ -41,4 +41,6 @@ You are now ready to deploy !
   * `cap <env> nginx:vhost:remove` : Remove uploaded vhost to conf.d folder
 
 ### Thanks
-A big thanks to [Grafikart](http://grafikart.fr) from where this boilerplate starter come from
+- A big thanks to [Grafikart](http://grafikart.fr) from where this boilerplate starter come from
+- [karlingen](https://github.com/karlingen/php-i18n-yaml) for the I18N php class
+
