@@ -1,2 +1,23 @@
 fr:
-  hello_world: Bonjour le monde !
+  mailer:
+    label:
+      fullname: Nom
+      email: Email
+      message: Message
+      submit: Envoyer
+      copy: Recevoir une copie de ce mail
+      required: Tous les champs suffixés d'un astérisque (*) sont obligatoires
+
+    placeholder:
+      fullname: Votre nom (*)
+      email: Votre email (*)
+      message: Votre message (*)
+
+    errors:
+      fullname: N'oubliez pas de renseigner votre nom ;)
+      email: N'oubliez pas de renseigner un email valide ;)
+      message: N'oubliez pas de renseigner votre message ;)
+      global: Des erreurs ont empêchés le formulaire d'être correctement soumis.
+
+  footer:
+    copyright: Tous droits réservés
