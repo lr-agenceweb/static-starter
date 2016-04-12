@@ -48,7 +48,7 @@ path = new (->
 gulp.task 'php', ['watchall'], ->
   php.server {
     base: path.root
-    port: 8014
+    port: 8015
     keepalive: true
   }, ->
     browserSync
@@ -56,7 +56,7 @@ gulp.task 'php', ['watchall'], ->
       port: 8080
       open: false
       ui: false
-      proxy: '127.0.0.1:8014'
+      proxy: '127.0.0.1:8015'
     return
 
 #

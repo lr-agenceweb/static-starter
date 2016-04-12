@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2503eec0aec0701fcd9803b718cf09ba",
-    "content-hash": "032f3a40cac12880d7ed5265345a8f54",
+    "hash": "980206442c91c006558bdb17f5c49b60",
+    "content-hash": "758869e45e0417f4de9f2a25d8f46e14",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -174,6 +174,47 @@
             ],
             "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
             "time": "2015-11-01 10:15:28"
+        },
+        {
+            "name": "samdark/sitemap",
+            "version": "2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/samdark/sitemap.git",
+                "reference": "da76edbef6383060c2d08523ae1b07f61b89a3fc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/samdark/sitemap/zipball/da76edbef6383060c2d08523ae1b07f61b89a3fc",
+                "reference": "da76edbef6383060c2d08523ae1b07f61b89a3fc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "samdark\\sitemap\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Alexander Makarov",
+                    "email": "sam@rmcreative.ru",
+                    "homepage": "http://rmcreative.ru/"
+                }
+            ],
+            "description": "Sitemap and sitemap index builder",
+            "homepage": "https://github.com/samdark/sitemap",
+            "keywords": [
+                "Sitemap"
+            ],
+            "time": "2015-07-14 07:10:08"
         },
         {
             "name": "slim/slim",

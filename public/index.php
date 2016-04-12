@@ -1,20 +1,29 @@
 <?php
 require '../vendor/autoload.php';
 
+use App\Router;
+use App\PagesCollection;
+use App\SitemapHelper;
+
 // We start Slim and create a new PagesCollection
 $app = new \Slim\Slim([
   'templates.path' => views_path
 ]);
 $app->add(new \Slim\Middleware\SessionCookie);
 
-$router = new \App\Router($app);
-$pages = new \App\PagesCollection();
+$router = new Router($app);
+$pages = new PagesCollection();
 
 $router->post('/contact', 'Contacts@post');
 
 $app->contact_validator = function() {
   return new ContactValidator($_POST);
 };
+
+if(!SitemapHelper::already_generated()){
+  SitemapHelper::create_folders();
+  SitemapHelper::set_sitemap($pages);
+}
 
 // Let's create a route for every YAML file in the content directory
 foreach($pages as $page){

@@ -1,5 +1,7 @@
 ---
 layout: homepage
+locale: en
+
 title: Homepage !
 header_title: |
   Hi my name is <em>John Doe</em>.
