@@ -31,7 +31,7 @@
         <input id="checkbox_copy" type="checkbox" name="checkbox_copy" checked value="1">
       </label>
 
-      <input type="submit" value="<?= App\I18N::t('mailer.label.submit'); ?>" class="button" />
+      <button type="submit" class="button ffab-after fa-arrow-right"> <?= App\I18N::t('mailer.label.submit'); ?> </button>
 
       <p class="text-right">
         <small> <?= App\I18N::t('mailer.label.required'); ?> </small>
