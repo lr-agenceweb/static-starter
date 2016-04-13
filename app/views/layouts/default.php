@@ -1,17 +1,33 @@
 <!DOCTYPE html>
-<html lang="<?= locale() ?>">
+<html lang="<?= locale(); ?>">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="<?= $page->description ?>">
-    <meta name="keywords" content="<?= $page->keywords ?>">
+    <meta name="description" content="<?= $page->description; ?>">
+    <meta name="keywords" content="<?= $page->keywords; ?>">
+
+    <!-- Social meta -->
+    <meta property="og:title" content="<?= site_title($page); ?>" />
+    <meta property="og:description" content="<?= $page->description; ?>" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="<?= get_current_url(); ?>" />
+    <?php if(has_image($page)): ?>
+    <meta property="og:image" content="<?= meta_image($page); ?>" />
+    <?php endif; ?>
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="<?= site_title($page); ?>" />
+    <meta name="twitter:description" content="<?= $page->description; ?>" />
+    <meta name="twitter:url" content="<?= get_current_url(); ?>" />
+    <?php if(has_image($page)): ?>
+    <meta name="twitter:image" content="<?= meta_image($page); ?>" />
+    <?php endif; ?>
+
     <meta name="author" content="<?= ADMIN_FULLNAME; ?>">
     <link type='text/plain' rel='author' href='/humans.txt'>
 
-    <title>
-      <?= (isset($page) && !is_null($page->title)) ? $page->title . ' | ' : '' ?><?= SITE_TITLE; ?>
-    </title>
+    <title> <?= site_title($page); ?> </title>
 
     <link href='//fonts.googleapis.com/css?family=Poppins:300,700' rel='stylesheet' type='text/css'>
     <link href='//api.mapbox.com/mapbox.js/v2.2.3/mapbox.css' rel='stylesheet' type='text/css'>

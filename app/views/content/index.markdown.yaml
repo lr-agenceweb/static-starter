@@ -5,6 +5,7 @@ locale: fr
 title: Accueil !
 description: Description page d'accueil
 keywords: Mots, clés, page, d'accueil
+image: /assets/images/heading.jpg
 
 header_title: |
   Salut, mon nom est <em>John Doe</em>.
