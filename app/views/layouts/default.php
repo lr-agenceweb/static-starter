@@ -68,6 +68,6 @@
       <div class="push"></div>
     </main>
 
-    <?php require_once partials_path . '/footer.' . locale() . '.php'; ?>
+    <?php require_once partials_path . '/footer.php'; ?>
   </body>
 </html>
