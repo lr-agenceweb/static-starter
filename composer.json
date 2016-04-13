@@ -23,6 +23,7 @@
             "app/helpers/helpers.php",
             "app/helpers/sitemap_helper.php",
             "app/helpers/url_helper.php",
+            "app/helpers/html_helper.php",
 
             "app/mailers/contact_mailer.php",
             "app/mailers/email_template.php",
