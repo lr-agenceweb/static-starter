@@ -56,6 +56,13 @@
 
     <main id="wrapper" class="wrapper">
       <?php require_once partials_path . '/menu.' . locale() . '.php'; ?>
+
+      <header class="row">
+        <div class="small-12 columns">
+          <h2> <?= $page->title; ?> </h2>
+        </div>
+      </header>
+
       <?= $content; ?>
 
       <div class="push"></div>

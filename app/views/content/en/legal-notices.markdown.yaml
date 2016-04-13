@@ -1,0 +1,26 @@
+---
+layout: default
+locale: en
+
+title: Legal Notices
+description: Legal notices description
+keywords: keywords, page, legal, notices
+---
+
+<div class="row">
+  <article class="small-12 medium-6 columns">
+    <h3 class="post-title"> Site hosting </h3>
+    <div>
+      <p> <strong>This website is hosted by</strong>: <br /> Host : ONLINE SAS <br /> Website : <a target="_blank" href="https://www.online.net/fr">https://www.online.net</a> <br /> Phone : +33.(0)1.84.13.00.00 <br /> TVA : FR 35 433115904 <br /> </p>
+      <p> <strong>Postal address</strong>: <br /> ONLINE SAS <br /> BP 438 75366 <br /> PARIS CEDEX 08 </p>
+    </div>
+  </article>
+
+  <article class="small-12 medium-6 columns">
+    <h3 class="post-title"> Domain name </h3>
+    <div>
+      <p> <strong>The domain name come from</strong> :<br /> Host : OVH SAS <br /> Website : <a target="_blank" href="https://www.ovh.com">https://www.ovh.com</a> <br /> Phone: 1007 <br /> SAS au capital de 10 059 500 € <br /> RCS Lille Métropole 424 761 419 00045 <br /> Code APE 6202A <br /> N° TVA : FR 22 424 761 419 </p>
+      <p> <strong>Head office</strong> : <br /> 2 rue Kellermann <br /> 59100 Roubaix <br /> France </p>
+    </div>
+  </article>
+</div>
