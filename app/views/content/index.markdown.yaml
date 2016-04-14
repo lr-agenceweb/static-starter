@@ -4,6 +4,10 @@ locale: fr
 created_at: '2016-04-13 23:11:32'
 updated_at: '2016-04-13 23:11:32'
 
+slug:
+  fr: /
+  en: /en
+
 title: Accueil !
 description: Description page d'accueil
 keywords: Mots, clés, page, d'accueil

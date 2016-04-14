@@ -4,6 +4,10 @@ locale: fr
 created_at: '2016-04-13 23:11:32'
 updated_at: '2016-04-13 23:11:32'
 
+slug:
+  fr: /contact
+  en: /en/contact
+
 title: Me contacter
 ---
 

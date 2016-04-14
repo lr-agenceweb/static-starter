@@ -55,6 +55,7 @@
     <?php require_once partials_path . '/_flash.php'; ?>
 
     <main id="wrapper" class="wrapper">
+      <?php require_once partials_path . '/_locale_switcher.php'; ?>
       <?php require_once partials_path . '/menu.' . locale() . '.php'; ?>
 
       <header class="row">

@@ -4,6 +4,10 @@ locale: fr
 created_at: '2016-04-13 23:11:32'
 updated_at: '2016-04-13 23:11:32'
 
+slug:
+  fr: /mentions-legales
+  en: /en/legal-notices
+
 title: Mentions Légales
 description: Description page mentions légales
 keywords: Mots, clés, page, mentions, légales

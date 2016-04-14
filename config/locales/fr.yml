@@ -1,4 +1,8 @@
 fr:
+  locales:
+    fr: Français
+    en: English
+
   mailer:
     label:
       fullname: Nom
