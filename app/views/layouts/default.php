@@ -56,7 +56,7 @@
 
     <main id="wrapper" class="wrapper">
       <?php require_once partials_path . '/_locale_switcher.php'; ?>
-      <?php require_once partials_path . '/menu.' . locale() . '.php'; ?>
+      <?php require_once partials_path . '/menu.php'; ?>
 
       <header class="row">
         <div class="small-12 columns">
