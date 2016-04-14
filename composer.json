@@ -20,7 +20,7 @@
             "app/models/pages_collection.php",
             "app/models/i18n.php",
 
-            "app/helpers/helpers.php",
+            "app/helpers/application_helper.php",
             "app/helpers/sitemap_helper.php",
             "app/helpers/url_helper.php",
             "app/helpers/html_helper.php",
