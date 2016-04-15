@@ -1,10 +1,34 @@
-.alert
-  padding: 5px
-  color: #FFF
-  font-size: 13px
-  margin-bottom: 25px
+// .flash
+//   padding: 5px
+//   color: #FFF
+//   font-size: 13px
+//   margin-bottom: 25px
 
-  &.alert-success
-    color: $success-color
-  &.alert-alert
-    color: $warning-color
+//   &.flash-success
+//     background-color: $success-color
+//   &.flash-alert, &.flash-error
+//     background-color: $warning-color
+
+.alert-box
+  position: fixed
+  bottom: 15px
+  left: 15px
+  z-index: 1
+  font-size: .8rem
+  padding: .8rem 2rem .8rem .8rem !important
+  color: $white
+  margin-bottom: 0
+
+  &.notice, &.success
+    background-color: $success-color
+
+  &.error, &.alert
+    background-color: $alert-color
+
+  &.warning
+    background-color: $warning-color
+
+  .close-button
+    right: 0.5rem
+    top: 0.2rem
+    color: $white

@@ -13,8 +13,7 @@ function pages($path, $depth = 0){
 /* Return the URL for the Page or the route */
 function route($path){
   global $app;
-  $locale = locale() == 'en' ? '/' . locale() : '';
-  return $locale . $app->urlFor(is_string($path) ? $path : $path->getName());
+  return $app->urlFor(is_string($path) ? $path : $path->getName());
 }
 
 /* Return the current locale of the page */
@@ -38,4 +37,12 @@ function auto_copyright($year = 'auto'){
     return intval($year) . ' - ' . date('Y');
   }
   return date('Y');
+}
+
+/**
+ * Check if current request is made by AJAX or not
+ * Return boolean
+ */
+function is_ajax(){
+  return !empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest';
 }

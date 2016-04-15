@@ -1,5 +1,14 @@
 ---
 layout: homepage
+locale: en
+created_at: '2016-04-13 23:11:32'
+updated_at: '2016-04-13 23:11:32'
+
+menu: home
+slug:
+  fr: /
+  en: /en
+
 title: Homepage !
 header_title: |
   Hi my name is <em>John Doe</em>.

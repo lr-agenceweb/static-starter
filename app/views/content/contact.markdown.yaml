@@ -1,0 +1,18 @@
+---
+layout: contact
+locale: fr
+created_at: '2016-04-13 23:11:32'
+updated_at: '2016-04-13 23:11:32'
+
+menu: contact
+slug:
+  fr: /contact
+  en: /en/contact
+
+title: Me contacter
+---
+
+<div class="medium-6 columns">
+  <h2> Ici vous pouvez me contacter </h2>
+  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+</div>

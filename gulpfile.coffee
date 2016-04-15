@@ -27,9 +27,11 @@ path = new (->
   @sass = @root + '/assets/sass'
   @coffee = @root + '/assets/coffeescript'
   @img = @root + '/assets/images'
+  @fonts = @root + '/assets/fonts'
+
   @app = './app'
-  @views = './views'
   @config = './config'
+  @views = @app + '/views'
   @partials = @views + '/partials'
   @content = @views + '/content'
   @layout = @views + '/layouts'
@@ -46,7 +48,7 @@ path = new (->
 gulp.task 'php', ['watchall'], ->
   php.server {
     base: path.root
-    port: 8013
+    port: 8015
     keepalive: true
   }, ->
     browserSync
@@ -54,7 +56,7 @@ gulp.task 'php', ['watchall'], ->
       port: 8080
       open: false
       ui: false
-      proxy: '127.0.0.1:8013'
+      proxy: '127.0.0.1:8015'
     return
 
 #
@@ -62,9 +64,7 @@ gulp.task 'php', ['watchall'], ->
 #
 gulp.task 'watchall', ->
   gulp.watch([
-    "#{path.app}/**/*.php",
-    "#{path.config}/**/*.{php,yml}",
-    "#{path.views}/**/*.{php,yaml,yml}"
+    "#{path.app}/**/*.{php,yaml,yml}"
   ]).on 'change', ->
     browserSync.reload()
     return
@@ -113,6 +113,7 @@ gulp.task 'coffee', ->
     'node_modules/jquery-placeholder/jquery.placeholder.js',
     'node_modules/foundation-sites/js/foundation.core.js',
     'node_modules/foundation-sites/js/foundation.util.mediaQuery.js',
+    'node_modules/foundation-sites/js/foundation.util.triggers.js',
     'node_modules/foundation-sites/js/foundation.abide.js'
   ]
   .pipe $.babel()
@@ -120,6 +121,10 @@ gulp.task 'coffee', ->
   .pipe $.uglify()
   .pipe $.size()
   .pipe gulp.dest path.dist_js
+
+gulp.task 'fonts', ->
+  gulp.src 'node_modules/font-awesome/fonts/*'
+  .pipe gulp.dest path.fonts
 
 #
 # == Copy all assets and pages to the site folder

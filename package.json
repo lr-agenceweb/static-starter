@@ -13,6 +13,7 @@
     "browser-sync": "^2.11.1",
     "coffee-script": "^1.8.0",
     "del": "^2.1.0",
+    "font-awesome": "^4.5.0",
     "gulp": "^3.8.11",
     "gulp-add-src": "^0.2.0",
     "gulp-autoprefixer": "^3.1.0",
@@ -39,15 +40,19 @@
     "gulp-watch": "^4.3.5",
     "gulp.spritesmith": "^6.2.0",
     "install": "^0.6.0",
+    "napa": "^2.3.0",
     "npm": "^3.3.12",
     "path": "^0.12.7",
     "require-dir": "^0.3.0"
   },
   "dependencies": {
     "autosize": "^3.0.15",
-    "foundation-sites": "^6.2.0",
+    "foundation-sites": "^6.2.1",
     "jquery": "^2.2.1",
     "jquery-placeholder": "^2.3.1",
     "vegas": "^2.2.0"
+  },
+  "scripts": {
+    "install": "napa joshmedeski/foundation-font-awesome-buttons"
   }
 }

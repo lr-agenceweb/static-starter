@@ -32,10 +32,23 @@ define('DKIM_SELECTOR', $mailing['dkim']['selector']);
 define('MAIL_SUBJECT', '');
 define('MAIL_SUBJECT_COPY', '');
 
+// Application paths
+define('base_path', dirname(__DIR__));
+define('app_path', base_path . DIRECTORY_SEPARATOR . 'app' );
+define('views_path', app_path . DIRECTORY_SEPARATOR . 'views' );
+define('partials_path', views_path . DIRECTORY_SEPARATOR . 'partials' );
+define('content_path', views_path . DIRECTORY_SEPARATOR . 'content');
+define('layouts_path', views_path . DIRECTORY_SEPARATOR . 'layouts');
+define('mailers_path', views_path . DIRECTORY_SEPARATOR . 'mailers' );
+
+// I18n
+define("DEFAULT_LOCALE", locale());
+define("DIR_LOCALE", base_path . "/config/locales");
+
 // Feedback messages
-define('FEEDBACK_WRONG_FIELDS', '');
-define('FEEDBACK_SUCCESS', '');
-define('FEEDBACK_ERROR', '');
+define('FEEDBACK_WRONG_FIELDS', App\I18N::t('mailer.errors.feedback.wrong_fields'));
+define('FEEDBACK_SUCCESS', App\I18N::t('mailer.errors.feedback.success'));
+define('FEEDBACK_ERROR', App\I18N::t('mailer.errors.feedback.error'));
 
 // Date
 date_default_timezone_set('Europe/Paris');

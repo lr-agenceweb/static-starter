@@ -11,7 +11,25 @@
             "App\\": "app"
         },
         "files": [
-            "app/helpers.php",
+            "app/router.php",
+
+            "app/controllers/application_controller.php",
+            "app/controllers/contacts_controller.php",
+
+            "app/models/page.php",
+            "app/models/pages_collection.php",
+            "app/models/i18n.php",
+
+            "app/helpers/application_helper.php",
+            "app/helpers/sitemap_helper.php",
+            "app/helpers/url_helper.php",
+            "app/helpers/html_helper.php",
+
+            "app/mailers/contact_mailer.php",
+            "app/mailers/email_template.php",
+
+            "app/validators/contact_validator.php",
+
             "config/config.php"
         ]
     },
@@ -19,6 +37,8 @@
         "slim/slim": "~2.6",
         "vkbansal/frontmatter": "~1.3",
         "cebe/markdown": "~1.1",
-        "mustangostang/spyc": "^0.5.1"
+        "mustangostang/spyc": "^0.5.1",
+        "phpmailer/phpmailer": "^5.2",
+        "samdark/sitemap": "^2.0"
     }
 }

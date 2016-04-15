@@ -1,9 +1,18 @@
 ---
 layout: homepage
+locale: fr
+created_at: '2016-04-13 23:11:32'
+updated_at: '2016-04-13 23:11:32'
+
+menu: home
+slug:
+  fr: /
+  en: /en
 
 title: Accueil !
 description: Description page d'accueil
 keywords: Mots, clés, page, d'accueil
+image: /assets/images/heading.jpg
 
 header_title: |
   Salut, mon nom est <em>John Doe</em>.
