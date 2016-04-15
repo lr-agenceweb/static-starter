@@ -33,3 +33,8 @@ function get_current_url() {
   $url .= $_SERVER['REQUEST_URI'];
   return $url;
 }
+
+/* Return current menu item */
+function get_current_menu_item($menu_item, $page) {
+  return $menu_item == $page ? 'active' : '';
+}

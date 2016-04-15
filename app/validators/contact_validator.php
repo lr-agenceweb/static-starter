@@ -12,7 +12,7 @@ Class ContactValidator {
   public function check($name, $rule, $options = false) {
     $validator = "validate_$rule";
     if(!$this->$validator($name, $options)) {
-      $this->errors[$name] = "The $name fields has not been filled properly";
+      $this->errors[$name] = \App\I18N.t("mailer.errors.$name");
     }
   }
 

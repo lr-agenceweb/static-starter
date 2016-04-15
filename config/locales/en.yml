@@ -1,4 +1,8 @@
 en:
+  locales:
+    fr: Français
+    en: English
+
   mailer:
     label:
       fullname: Name
@@ -17,6 +21,7 @@ en:
       fullname: Don't forget to add your name ;)
       email: Don't forget to add a valid email ;)
       message: Don't forget to add your message ;)
+      nickname: Stop spam bots !
       feedback:
         wrong_fields: The form fields are not correctly filled. Please correct your information.
         success: Thank you, your message has been sent. I will answer you as soon as possible.
